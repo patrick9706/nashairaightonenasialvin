@@ -1,0 +1,136 @@
+:root {
+    --sage: #9caf88;
+    --purple: #5c387e;
+    --pink: #f4c2c2;
+    --cream: #fdfbd4;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cream);
+    color: var(--purple);
+}
+
+.title-font {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+/* Cover Overlay */
+.cover-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--sage);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: transform 1.2s ease-in-out;
+}
+
+.cover-content {
+    text-align: center;
+    color: white;
+    border: 2px solid var(--fdfbd4);
+    padding: 40px;
+    background: rgba(92, 56, 126, 0.1);
+}
+
+#openBtn {
+    background-color: var(--pink);
+    color: var(--purple);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+#openBtn:hover { transform: scale(1.1); }
+
+/* Main Content Hidden State */
+.main-hidden { opacity: 0; }
+.show-content { opacity: 1; transition: opacity 2s ease; }
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(253, 251, 212, 0.8), rgba(253, 251, 212, 0.8)), 
+                url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070');
+    background-size: cover;
+}
+
+/* Timer */
+.timer-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.time-box {
+    background: white;
+    border: 1px solid var(--sage);
+    padding: 15px;
+    min-width: 60px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.time-box span { font-size: 1.5rem; font-weight: bold; color: var(--purple); }
+.time-box p { margin: 0; font-size: 0.7rem; color: var(--sage); }
+
+.rsvp-link {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    background-color: var(--purple);
+    color: var(--pink);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* ENTOURAGE SECTION */
+.entourage-pair {
+    display: flex;
+    gap: 40px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.entourage-pair h3, .entourage-pair p { white-space: nowrap; }
+
+.entourage-grid {
+    display: grid;
+    /* keep cards fixed width so they don’t stretch on large screens */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+    gap: 20px;
+    margin-top: 40px;
+    justify-content: center;
+}
+.entourage-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    border-bottom: 3px solid var(--sage);
+    width: 300px;
+    margin: auto;
+}
+.entourage-card h3 {
+    font-size: 0.8rem;
+    margin-bottom: 2px;
+}
+.entourage-card p {
+    font-size: 0.6rem;
+    line-height: 1.2;
+}
